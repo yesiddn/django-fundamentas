@@ -16,7 +16,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+# from myapp.views import hello # Import only the hello function from views.py
+from myapp import views # Import all functions from views.py
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', views.hello),
+    path('about/', views.about),
 ]
